@@ -1,43 +1,26 @@
-import React, { useEffect, useState } from 'react';
-import { AppBar, Toolbar, IconButton } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
+import React, { useState } from 'react';
 import Sidebar from './components/Sidebar';
+import MenuButton from './components/MenuButton';  // Import the new MenuButton component
 
 function App() {
-  const [message, setMessage] = useState('');
   const [isDrawerOpen, setDrawerOpen] = useState(false);
 
-  useEffect(() => {
-    // Fetch data from FastAPI backend
-    fetch('http://127.0.0.1:8000/')
-      .then((response) => response.json())
-      .then((data) => setMessage(data.message))
-      .catch((error) => console.error('Error fetching data:', error));
-  }, []);
-
-  // Function to toggle the sidebar
+  // Function to toggle the drawer
   const toggleDrawer = () => {
     setDrawerOpen(!isDrawerOpen);
   };
 
   return (
     <div className="App">
-      {/* AppBar with menu icon */}
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton edge="start" color="inherit" aria-label="menu" onClick={toggleDrawer}>
-            <MenuIcon />
-          </IconButton>
-          <h1>{message ? message : 'Loading...'}</h1>
-        </Toolbar>
-      </AppBar>
+      {/* Use the MenuButton */}
+      <MenuButton isDrawerOpen={isDrawerOpen} toggleDrawer={toggleDrawer} />
 
       {/* Sidebar Component */}
       <Sidebar isDrawerOpen={isDrawerOpen} toggleDrawer={toggleDrawer} />
 
-      {/* Main Content */}
+      {/* Main content */}
       <div style={{ padding: '20px' }}>
-        <h2>Main Content Area</h2>
+        <h1>Welcome to the App</h1>
       </div>
     </div>
   );
