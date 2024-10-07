@@ -1,0 +1,20 @@
+/* src/styles/Layout.css */
+
+:root {
+    --background-light: #f0f0f0; /* Light background */
+    --background-dark: #1e1e2f; /* Dark background */
+    --text-light: #333333; /* Dark text for light theme */
+    --text-dark: #ffffff; /* Light text for dark theme */
+}
+
+.light {
+    background-color: var(--background-light);
+    color: var(--text-light);
+}
+
+.dark {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+}
+
+/* Additional styles as needed */

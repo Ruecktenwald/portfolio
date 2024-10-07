@@ -1,0 +1,25 @@
+/* src/styles/Home.css */
+
+.hero-section {
+    text-align: center;
+    padding: 40px 20px; /* Adjusted padding for more space */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.hero-section.dark {
+    background-color: #333; /* Dark background for dark theme */
+}
+
+.hero-section.light {
+    background-color: #f5f5f5; /* Light background for light theme */
+}
+
+.get-started-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.get-started-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}

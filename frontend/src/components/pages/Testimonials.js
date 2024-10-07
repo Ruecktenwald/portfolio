@@ -1,11 +1,14 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useContext } from 'react';
 import Slider from 'react-slick';
 import { Card, CardContent, Typography, Box } from '@mui/material';
 import Layout from '../layout/Layout';
+import { ThemeContext } from '../../context/ThemeContext'; // Import Theme Context
+import '../../styles/Testimonials.css';
 
 function Testimonials() {
   const sliderRef = useRef(null);
   const [autoplay, setAutoplay] = useState(true);
+  const { theme } = useContext(ThemeContext); // Access current theme
 
   const settings = {
     dots: true,
@@ -16,9 +19,9 @@ function Testimonials() {
     arrows: false,
     draggable: true,
     autoplay: autoplay,
-    autoplaySpeed: 2000, // Adjust the speed as needed
-    pauseOnHover: true, // Pause on hover
-    beforeChange: () => setAutoplay(true), // Restart autoplay when changing slides
+    autoplaySpeed: 2000,
+    pauseOnHover: true,
+    beforeChange: () => setAutoplay(true),
   };
 
   const testimonials = [
@@ -33,16 +36,31 @@ function Testimonials() {
   ];
 
   return (
-    <Layout title="Testimonials" backgroundColor="#f0f0f0">
-      <Box sx={{ width: '100%', padding: '40px 0' }}>
+    <Layout title="Testimonials">
+      <Box sx={{ width: '100%', padding: '40px 0', textAlign: 'center' }}>
         <Slider ref={sliderRef} {...settings} onClick={() => setAutoplay(!autoplay)}>
           {testimonials.map((testimonial, index) => (
-            <Card key={index} sx={{ margin: '0px', minHeight: '200px' }}>
+            <Card key={index} sx={{
+              margin: '0px',
+              minHeight: '200px',
+              backgroundColor: theme === 'dark' ? '#424242' : '#fff', // Theme-based background
+              transition: 'transform 0.3s',
+              '&:hover': {
+                transform: 'scale(1.05)', // Scale effect on hover
+              },
+            }}>
               <CardContent>
-                <Typography variant="body1" sx={{ fontStyle: 'italic' }}>
+                <Typography variant="body1" sx={{
+                  fontStyle: 'italic',
+                  color: theme === 'dark' ? '#bb86fc' : '#333' // Theme-based text color
+                }}>
                   "{testimonial.feedback}"
                 </Typography>
-                <Typography variant="h6" sx={{ fontWeight: 'bold', marginTop: '10px' }}>
+                <Typography variant="h6" sx={{
+                  fontWeight: 'bold',
+                  marginTop: '10px',
+                  color: theme === 'dark' ? '#fff' : '#6200ea' // Theme-based name color
+                }}>
                   {testimonial.name}
                 </Typography>
               </CardContent>

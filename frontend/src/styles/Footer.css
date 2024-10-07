@@ -1,0 +1,21 @@
+/* src/styles/Footer.css */
+
+.footer {
+    padding: 20px;
+    background-color: #f5f5f5; /* Light background color */
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+.footer a {
+    color: #007bff; /* Link color */
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Underline on hover */
+}

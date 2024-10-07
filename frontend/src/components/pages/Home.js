@@ -1,34 +1,36 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Layout from '../layout/Layout'; // Importing the shared Layout component
-import { Button } from '@mui/material';
+import { Button, Typography } from '@mui/material';
 import { ArrowForward as ArrowForwardIcon } from '@mui/icons-material';
-import Services from './Services'; // Import Services component
-import Testimonials from './Testimonials'; // Import Testimonials component
-import ContactUs from './ContactUs'; // Import ContactUs component
+import { ThemeContext } from '../../context/ThemeContext'; // Import Theme Context
 import { Link } from 'react-scroll'; // Use react-scroll for smooth scrolling
-
+import '../../styles/Home.css'; // Importing the CSS styles
 
 function Home() {
+  const { theme } = useContext(ThemeContext); // Access current theme
+
   return (
-    <div>
-      {/* Hero Section */}
-      <Layout title="Professional Web Development Services" backgroundColor="#f5f5f5">
-        <p>Delivering cutting-edge web solutions for your business needs.</p>
+    <Layout title="Professional Web Development Services">
+      <div className={`hero-section ${theme}`}>
+        <Typography variant="h4" sx={{ marginBottom: '20px', color: theme === 'dark' ? '#bb86fc' : '#6200ea' }}>
+          Delivering cutting-edge web solutions for your business needs.
+        </Typography>
         <Button
           variant="contained"
           color="primary"
           size="large"
           endIcon={<ArrowForwardIcon />}
-          sx={{ marginTop: '20px', padding: '10px 20px' }}
+          sx={{ marginTop: '20px', padding: '10px 20px', transition: 'background-color 0.3s ease' }}
           component={Link}
           to="contact"
           smooth
           duration={500}
+          className="get-started-button"
         >
           Get Started
         </Button>
-      </Layout>
-    </div>
+      </div>
+    </Layout>
   );
 }
 

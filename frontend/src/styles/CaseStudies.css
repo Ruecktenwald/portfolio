@@ -1,0 +1,29 @@
+.case-study {
+    background-color: var(--background-color);
+    border-radius: 12px; /* Rounded corners */
+    padding: 0px; /* Padding inside the boxes */
+    margin: 20px 0; /* Vertical margin for spacing between boxes */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.case-study:hover {
+    transform: scale(1.02); /* Slightly scale up on hover */
+}
+
+.case-study h3 {
+    color: var(--primary-color); /* Use CSS variable for primary color */
+}
+
+.case-study p {
+    color: var(--text-color); /* Text color for paragraphs */
+}
+
+.read-more {
+    text-decoration: none;
+    color: #007bff; /* Link color */
+    transition: color 0.3s;
+}
+
+.read-more:hover {
+    color: #0056b3; /* Darker shade on hover */
+}

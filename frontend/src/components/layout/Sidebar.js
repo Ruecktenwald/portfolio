@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Drawer, List, ListItem, ListItemText, Divider, Box, Typography } from '@mui/material';
 import { Link } from 'react-scroll'; // Importing Link from react-scroll
+import { ThemeContext } from '../../context/ThemeContext'; // Import Theme Context
 
 function Sidebar({ isDrawerOpen, toggleDrawer }) {
+  const { theme } = useContext(ThemeContext); // Get current theme
+
   return (
     <Drawer
       anchor="right"
@@ -11,7 +14,7 @@ function Sidebar({ isDrawerOpen, toggleDrawer }) {
       sx={{
         '& .MuiDrawer-paper': {
           width: '200px',
-          backgroundColor: '#f5f5f5',
+          backgroundColor: theme === 'dark' ? '#424242' : '#f5f5f5', // Use theme colors
           boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
           marginTop: '64px', // Adjust to match the height of the header
         },
@@ -31,6 +34,7 @@ function Sidebar({ isDrawerOpen, toggleDrawer }) {
               smooth={true}
               duration={500}
               style={{ cursor: 'pointer', width: '100%', textDecoration: 'none', color: 'inherit' }} // Ensure full row is clickable
+              aria-label="Navigate to Home" // Accessibility
               onClick={toggleDrawer}
             >
               <ListItemText primary="Home" />
@@ -43,6 +47,7 @@ function Sidebar({ isDrawerOpen, toggleDrawer }) {
               smooth={true}
               duration={500}
               style={{ cursor: 'pointer', width: '100%', textDecoration: 'none', color: 'inherit' }} // Full row clickable
+              aria-label="Navigate to Services" // Accessibility
               onClick={toggleDrawer}
             >
               <ListItemText primary="Services" />
@@ -55,6 +60,7 @@ function Sidebar({ isDrawerOpen, toggleDrawer }) {
               smooth={true}
               duration={500}
               style={{ cursor: 'pointer', width: '100%', textDecoration: 'none', color: 'inherit' }} // Full row clickable
+              aria-label="Navigate to Our Case Studies" // Accessibility
               onClick={toggleDrawer}
             >
               <ListItemText primary="Our Case Studies" />
@@ -67,6 +73,7 @@ function Sidebar({ isDrawerOpen, toggleDrawer }) {
               smooth={true}
               duration={500}
               style={{ cursor: 'pointer', width: '100%', textDecoration: 'none', color: 'inherit' }} // Full row clickable
+              aria-label="Navigate to Testimonials" // Accessibility
               onClick={toggleDrawer}
             >
               <ListItemText primary="Testimonials" />
@@ -79,6 +86,7 @@ function Sidebar({ isDrawerOpen, toggleDrawer }) {
               smooth={true}
               duration={500}
               style={{ cursor: 'pointer', width: '100%', textDecoration: 'none', color: 'inherit' }} // Full row clickable
+              aria-label="Navigate to Contact Us" // Accessibility
               onClick={toggleDrawer}
             >
               <ListItemText primary="Contact Us" />

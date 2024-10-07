@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import Sidebar from './components/layout/Sidebar';
 import Header from './components/common/Header';
+import Footer from './components/common/Footer';
 import Home from './components/pages/Home';
 import Services from './components/pages/Services';
 import Testimonials from './components/pages/Testimonials';
 import ContactUs from './components/pages/ContactUs';
-import CaseStudies from './components/pages/CaseStudies'; // Using only CaseStudies.js
+import CaseStudies from './components/pages/CaseStudies'; 
 import { IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import 'slick-carousel/slick/slick.css';
@@ -31,7 +32,7 @@ function App() {
           top: '75px',
           right: '20px',
           zIndex: 1300,
-          backgroundColor: 'rgba(255, 255, 255, 0.0)', // White with 80% opacity
+          backgroundColor: 'rgba(255, 255, 255, 0.0)',
           '&:hover': {
             backgroundColor: '#e0e0e0',
           },
@@ -40,36 +41,20 @@ function App() {
         <MenuIcon />
       </IconButton>
 
-      {/* Sidebar for Projects / Case Studies */}
+      {/* Sidebar */}
       <Sidebar isDrawerOpen={isDrawerOpen} toggleDrawer={toggleDrawer} />
 
       {/* Main Sections */}
-      <div>
-        <section id="home">
-          <Home />
-        </section>
-
-        <section id="services">
-          <Services />
-        </section>
-
-        <section id="case-studies">
-          <CaseStudies />
-        </section>
-
-        <section id="testimonials">
-          <Testimonials />
-        </section>
-
-        <section id="contact">
-          <ContactUs />
-        </section>
+      <div style={{ paddingTop: '0px' }}> {/* Adjust for the fixed header height */}
+        <section id="home" ><Home /></section>
+        <section id="services"><Services /></section>
+        <section id="case-studies"><CaseStudies /></section>
+        <section id="testimonials"><Testimonials /></section>
+        <section id="contact"><ContactUs /></section>
       </div>
 
       {/* Footer Component */}
-      <footer style={{ padding: '20px', textAlign: 'center', backgroundColor: '#f5f5f5', marginTop: '50px' }}>
-        <p>© 2024 MyBrand - All Rights Reserved</p>
-      </footer>
+      <Footer />
     </div>
   );
 }

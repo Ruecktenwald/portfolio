@@ -1,0 +1,17 @@
+.header {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.header button {
+    margin-left: 20px;
+}
