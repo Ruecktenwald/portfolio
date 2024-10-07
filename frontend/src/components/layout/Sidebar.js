@@ -22,7 +22,6 @@ function Sidebar({ isDrawerOpen, toggleDrawer }) {
     >
       <Box sx={{ p: 2 }}>
         <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 2 }}>
-          Menu
         </Typography>
 
         <Divider />
