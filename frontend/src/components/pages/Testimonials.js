@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import Slider from 'react-slick';
 import { Card, CardContent, Typography, Box } from '@mui/material';
-import Layout from './Layout';
+import Layout from '../layout/Layout';
 
 function Testimonials() {
   const sliderRef = useRef(null);

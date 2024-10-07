@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from './Layout';  // Import the shared Layout component
+import Layout from '../layout/Layout';  // Import the shared Layout component
 
 function About() {
   return (

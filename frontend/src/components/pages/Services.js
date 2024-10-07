@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Card, CardContent, Typography } from '@mui/material';
-import Layout from './Layout'; // Using shared Layout component
+import Layout from '../layout/Layout'; // Using shared Layout component
 
 function Services() {
   const services = [

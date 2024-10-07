@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Box, TextField, Button, Typography } from '@mui/material';
-import Layout from './Layout'; // Using the shared Layout component
+import Layout from '../layout/Layout'; // Using the shared Layout component
 
 function Contact() {
   const [email, setEmail] = useState('');

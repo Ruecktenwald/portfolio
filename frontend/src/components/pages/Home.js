@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from './Layout'; // Importing the shared Layout component
+import Layout from '../layout/Layout'; // Importing the shared Layout component
 import { Button } from '@mui/material';
 import { ArrowForward as ArrowForwardIcon } from '@mui/icons-material';
 import Services from './Services'; // Import Services component

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import Sidebar from './components/Sidebar';
-import Header from './components/Header';
-import Home from './components/Home';
-import Services from './components/Services';
-import Testimonials from './components/Testimonials';
-import ContactUs from './components/ContactUs';
-import CaseStudies from './components/CaseStudies'; // Using only CaseStudies.js
+import Sidebar from './components/layout/Sidebar';
+import Header from './components/common/Header';
+import Home from './components/pages/Home';
+import Services from './components/pages/Services';
+import Testimonials from './components/pages/Testimonials';
+import ContactUs from './components/pages/ContactUs';
+import CaseStudies from './components/pages/CaseStudies'; // Using only CaseStudies.js
 import { IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import 'slick-carousel/slick/slick.css';

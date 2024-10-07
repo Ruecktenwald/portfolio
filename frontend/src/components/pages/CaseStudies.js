@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from './Layout'; // Shared layout for consistent design
+import Layout from '../layout/Layout'; // Shared layout for consistent design
 import { Link } from 'react-scroll'; // Smooth scrolling
 
 function CaseStudies() {
