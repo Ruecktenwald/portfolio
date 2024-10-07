@@ -4,9 +4,8 @@ import Header from './components/common/Header';
 import Footer from './components/common/Footer';
 import Home from './components/pages/Home';
 import Services from './components/pages/Services';
-import Testimonials from './components/pages/Testimonials';
 import ContactUs from './components/pages/ContactUs';
-import CaseStudies from './components/pages/CaseStudies'; 
+import Testimonials from './components/pages/Testimonials'; 
 import { IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import 'slick-carousel/slick/slick.css';
@@ -48,7 +47,6 @@ function App() {
       <div style={{ paddingTop: '0px' }}> {/* Adjust for the fixed header height */}
         <section id="home" ><Home /></section>
         <section id="services"><Services /></section>
-        <section id="case-studies"><CaseStudies /></section>
         <section id="testimonials"><Testimonials /></section>
         <section id="contact"><ContactUs /></section>
       </div>

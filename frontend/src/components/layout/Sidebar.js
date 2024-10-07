@@ -56,19 +56,6 @@ function Sidebar({ isDrawerOpen, toggleDrawer }) {
 
           <ListItem button onClick={toggleDrawer}>
             <Link
-              to="case-studies"
-              smooth={true}
-              duration={500}
-              style={{ cursor: 'pointer', width: '100%', textDecoration: 'none', color: 'inherit' }} // Full row clickable
-              aria-label="Navigate to Our Case Studies" // Accessibility
-              onClick={toggleDrawer}
-            >
-              <ListItemText primary="Our Case Studies" />
-            </Link>
-          </ListItem>
-
-          <ListItem button onClick={toggleDrawer}>
-            <Link
               to="testimonials"
               smooth={true}
               duration={500}

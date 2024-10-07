@@ -24,19 +24,6 @@ function Header() {
           </Link>
         </Typography>
 
-        {/* Call to Action Button - Linking to Contact Us */}
-        <Button
-          variant="contained"
-          color="primary"
-          sx={{ ml: 2 }}
-          component={Link}
-          to="contact"
-          smooth
-          duration={500}
-        >
-          Contact Us
-        </Button>
-
         {/* Theme Toggle Button */}
         <Button
           variant="outlined"

@@ -1,30 +1,33 @@
-.testimonials-container {
-    padding: 40px;
-    text-align: center;
+/* src/styles/CaseStudies.css */
+
+/* Add any additional styling if needed. The cards will inherit most styling from Material-UI */
+
+.case-study {
+    background-color: var(--background-color); /* Ensure it uses the defined background */
+    border-radius: 12px; /* Rounded corners */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
 }
 
-.testimonial-card {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+.case-study:hover {
+    transform: scale(1.05); /* Slightly scale up on hover for a nice effect */
 }
 
-.testimonial-text {
-    font-style: italic;
+.case-study h3 {
+    color: var(--primary-color); /* Use the primary color variable for headers */
 }
 
-.testimonial-author {
-    font-weight: bold;
-    margin-top: 10px;
-}
-.testimonial-card {
-    padding: 20px;
-    border-radius: 8px;
-    transition: transform 0.3s;
+.case-study p {
+    color: var(--text-color); /* Set the text color for paragraphs */
+    margin-bottom: 20px; /* Spacing below the paragraph */
+    text-align: center; /* Center-align text */
 }
 
-.testimonial-card:hover {
-    transform: scale(1.05);
+.read-more {
+    text-decoration: none; /* Remove underline from links */
+    color: #007bff; /* Link color */
+    transition: color 0.3s; /* Smooth color transition for hover effect */
+}
+
+.read-more:hover {
+    color: #0056b3; /* Darker shade on hover */
 }

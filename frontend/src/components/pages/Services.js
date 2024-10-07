@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
-import { Box, Card, CardContent, Typography } from '@mui/material';
-import Layout from '../layout/Layout'; // Using shared Layout component
-import '../../styles/Services.css';
+import Layout from '../layout/Layout'; // Importing the shared Layout component
+import { Box, Card, CardContent, Typography, Button } from '@mui/material';
 import { ThemeContext } from '../../context/ThemeContext'; // Import Theme Context
+import { Link } from 'react-scroll'; // Use react-scroll for smooth scrolling
+import '../../styles/Services.css'; // Importing the CSS styles
 
 function Services() {
   const { theme } = useContext(ThemeContext); // Access current theme
@@ -44,6 +45,22 @@ function Services() {
             </CardContent>
           </Card>
         ))}
+      </Box>
+      {/* New Section for Testimonials */}
+      <Box sx={{ textAlign: 'center', marginTop: '40px', padding: '20px' }}>
+        <Typography variant="h5" sx={{ color: theme === 'dark' ? '#bb86fc' : '#6200ea' }}>
+          What People Are Saying
+        </Typography>
+        <Button
+          variant="outlined"
+          sx={{ marginTop: '20px' }}
+          component={Link}
+          to="testimonials"
+          smooth
+          duration={500}
+        >
+          View Testimonials
+        </Button>
       </Box>
     </Layout>
   );
